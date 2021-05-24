@@ -1,3 +1,4 @@
+
 image: Ubuntu  # образ для сборки
 
 stack: jdk 11  # версия JDK
@@ -8,11 +9,6 @@ branches:
 
 build: off  # будем использовать свой скрипт сборки
 
-install: off
-# запускаем SUT (& означает, что в фоновом режиме - не блокируем терминал для запуска тестов)
-#  - java -jar ./artifacts/name.jar &
-
 build_script:
   - chmod +x gradlew
-  - ./gradlew test --info  # запускаем тест, флаг --info позволяет выводить больше информации
-  - git update-index --chmod=+x gradlew  # обновляем разрешение на выполнение gradlew
+  - ./gradlew test --info  # запускаем тест, флаг --info позволяет выводить больше информацииdate-index --chmod=+x gradlew  # обновляем разрешение на выполнение gradlew
